@@ -67,7 +67,7 @@ class CountryPicker extends StatelessWidget {
     assert(debugCheckHasMaterial(context));
     Country? displayCountry = selectedCountry;
 
-    displayCountry = Country.findByIsoCode(
+    displayCountry ??= Country.findByIsoCode(
         (Localizations.localeOf(context).countryCode) as String);
 
     return dense
